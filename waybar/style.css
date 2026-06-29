@@ -1,6 +1,6 @@
-@define-color main-bg #030615;
-@define-color border #803fbf;
-@define-color font #dddddd;
+@define-color main-bg #1a3068;
+@define-color border #1c1c26;
+@define-color font2 #fdf99a;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -8,9 +8,11 @@
     font-size: 13px;
 }
 window#waybar {
-    background-color: @main-bg;
-    border-bottom: 2px solid @border;
-    color: @font;
+    padding-top: 10px;
+    /*border: 2px solid @border;*/
+    /*background-color: @main-bg;*/
+    background: transparent;
+    color: @font2;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -55,7 +57,7 @@ button:hover {
 
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
     background-color: transparent;
     color: #fff;
 }
@@ -66,11 +68,13 @@ button:hover {
 
 #workspaces button.focused, #workspaces button.active {
     padding-top: 2px;
-    background: linear-gradient(
+    /*background: linear-gradient(
         to bottom,
         transparent 20%,
         @border 100%
-        );
+        );*/
+    background-color: #595978;
+    border-radius: 10px;
 }
 
 #workspaces button.urgent {
@@ -79,8 +83,7 @@ button:hover {
 
 #workspaces {
     border: 2px solid @border;
-    border-radius: 6px 6px 0px 0px;
-    border-bottom: 2px solid @main-bg;
+    border-radius: 10px;
 }
 
 #mode {
@@ -101,9 +104,7 @@ button:hover {
 #custom-media,
 #tray,
 #mode,
-#idle_inhibitor,
 #scratchpad,
-#power-profiles-daemon,
 #mpd {
     padding: 0 10px;
     color: #ffffff;
@@ -115,7 +116,7 @@ button:hover {
 }
 
 #window {
-    color: #666;
+    color: #999;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -133,7 +134,7 @@ button:hover {
 }
 
 #battery {
-    background: transparent;
+    background: @main-bg;
     color: @font;
 }
 
@@ -197,7 +198,7 @@ label:focus {
 }
 
 #backlight {
-    background: transparent;
+    background: @main-bg;
 }
 
 #network {
@@ -208,7 +209,7 @@ label:focus {
     background-color: #BB3f3f;
     color: #eee;
 }
-
+#workspaces,
 #pulseaudio,
 #idle_power,
 #network,
@@ -216,14 +217,16 @@ label:focus {
 #tray,
 #battery
 {
-    background: transparent;
+    background: @main-bg;
     color: #999999;
     border: 1px solid @border;
-    border-radius: 0px 0px 10px 10px;
-    margin-bottom: 5px;
-    border-top: None;
-    margin-top: 0px;
-    padding-bottom: 4px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 0px 10px;
+    margin-bottom: 0px;
+    /*border-top: None;*/
+}
+#workspaces {
+    padding: 0px;
 }
 #tray:hover,
 #pulseaudio:hover,
@@ -232,7 +235,7 @@ label:focus {
 #battery:hover
 {
     color: #eee;
-    padding-bottom: 2px;
+    padding-bottom: 0px;
 }
 
 
