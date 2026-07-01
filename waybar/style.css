@@ -1,10 +1,10 @@
-@define-color main-bg #1a3068;
-@define-color border #1c1c26;
-@define-color font2 #fdf99a;
-
+@define-color main-bg #0b0e13;
+@define-color border #151a20;
+@define-color font2 #666;
+@define-color workhigh #1f1f1f;
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "VictorMono Nerd Font propo",FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Monaspace Krypton Var","Symbols Nerd Font",FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 window#waybar {
@@ -73,7 +73,7 @@ button:hover {
         transparent 20%,
         @border 100%
         );*/
-    background-color: #595978;
+    background-color: @workhigh;
     border-radius: 10px;
 }
 
@@ -218,7 +218,7 @@ label:focus {
 #battery
 {
     background: @main-bg;
-    color: #999999;
+    color: @font2;
     border: 1px solid @border;
     border-radius: 10px 10px 10px 10px;
     padding: 0px 10px;
